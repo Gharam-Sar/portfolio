@@ -21,7 +21,7 @@
 
   }
 </script>
-<body>
+<body id="body">
   
 <div id="page_container">
   <nav role=”navigation”>
@@ -54,38 +54,93 @@
   </nav>
 
  
-    <main role=”main”>
-      <br><br><br><br><br><br><br><br>
+    <main role="main">
+      <div class = "theme">
+        <abbr title="Dark or Light Theme">
+     <input checked type="checkbox" id="switch" /><label for="switch"></label></abbr>
+      </div>
+  
+      <br><br><br><br><br><br>
       <div id="main_home">
      
         <div class="divsp">
-          <div class="divsp2">
-             <div> <p id="intro">
-  HI,I'm <span id="myname"><strong>Gharam Sarsour &nbsp;</strong></span>
+          <!-- <div class="divsp2"> -->
+             <div> <p class="intro">
+  HI,I'm <span class="myname" id="myname"><strong>Gharam Sarsour &nbsp;</strong></span>
 
 <br>
-  <span id="intro2"> &emsp;&emsp;&emsp;
+  <span class="intro2"> &emsp;&emsp;&emsp;
     &emsp;&emsp;
-    and this is <span id="myname"><strong>My Portfolio</strong></span></span>
+    and this is <span class="myname2" id="myname2"><strong>My Portfolio</strong></span></span>
 </p>
  </div> 
-          </div>
-        
+     
  <div><img class="avatar" src="img/me.jpeg" alt="Avatar"></div>
 
  
-      </div>
+</div></div>
       <div id="main_info">
-        info content
-      </div>
-      <div id="main_projects">
-        projects content
-      </div>
-      <div id="main_contact">
-        contact content
-      </div>
-                    
 
+      
+        <div class="divsp">
+          <div>  info content &emsp;</div>
+          <div>  info content </div>
+
+
+</div></div>
+<div id="main_projects">
+
+      
+  <div class="divsp">
+    <div>
+    <div>
+      
+      <a href="https://github.com/Gharam-Sar/Orchid-Web-Project.git" target="_blank" rel="noopener noreferrer"><img class="project_icon" src="img/git.png"> </a>
+      <br>
+      <name class="myname intro" id="project_name">Orchid Store</name>
+      <br>
+    <desc> An online plant and Flower Shop, created using html,css,java script and php </desc>
+      
+     </div> 
+     <br>
+     <div>      <a href="https://github.com/Gharam-Sar/Acute-Graduation-Project.git" target="_blank" rel="noopener noreferrer"><img class="project_icon" src="img/git.png"> </a>
+      <br>
+      <name class="myname intro" id="project_name2">Acute Application</name>
+      <br>
+      <desc> A mobile application to organize eating habits and water drinking,<br>
+         created with Flutter and runs on a node js server, along with a html and css Admin page.
+          </desc>
+        
+      
+     </div> 
+    </div>
+
+
+</div></div>
+<div id="main_contact">
+
+      
+  <div class="divsp">
+    <div>
+    <div>
+  <abbr title="+970568191595"> <a href="tel:+970568191595" target="_blank"><img class="contact_icon" src="img/mobile.png">
+     </a> 
+   </abbr>  <br>
+        +970568191595 
+  
+    </div>
+<div>
+<br>
+  <div>
+    <abbr title="sargharam@gmail.com"> <a href="mailto:sargharam@gmail.com" target="_blank" ><img class="contact_icon" src="img/email.png">
+       </a> 
+     </abbr>  <br>
+     sargharam@gmail.com 
+    
+      </div>
+</div>
+</div>
+</div></div>
       </main>
     </div>
 
@@ -100,7 +155,7 @@
         const btn_info = document.getElementById("info");
         const btn_projects = document.getElementById("projects");
         const btn_contact = document.getElementById("contact");
-      
+        const theme=document.getElementById("switch");
         btn_home.onclick = function () {
           (document.getElementById("main_home")).style.display = "block";
           
@@ -132,7 +187,25 @@
           (document.getElementById("main_contact")).style.display = "block";
         };
       
-
+        theme.onclick = function () {
+        if(!theme.checked)
+        {
+          (document.getElementById("body")).style.backgroundColor='#e9e9e9';
+          (document.getElementById("myname")).style.color='#585858';
+          (document.getElementById("myname2")).style.color='#585858';
+          (document.getElementById("project_name")).style.color='#585858';
+          (document.getElementById("project_name2")).style.color='#585858';
+        }
+        if(theme.checked)
+        {
+          (document.getElementById("body")).style.backgroundColor='#585858';
+          (document.getElementById("myname")).style.color='#e9e9e9';
+          (document.getElementById("myname2")).style.color='#e9e9e9';
+          (document.getElementById("project_name")).style.color='#e9e9e9';
+          (document.getElementById("project_name2")).style.color='#e9e9e9';
+        }
+                };
+       
  
 </script>
 </html>
